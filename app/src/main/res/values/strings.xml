@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Albums</string>
+
+    <string name="generic_error">Something wrong happened. Please check your connection then try again.</string>
+
+    <!-- Screens Titles -->
+    <string name="home_screen_title">Profile</string>
+    <string name="album_screen_title">Album</string>
+
+    <!-- Home Screen -->
+    <string name="albums">My Albums: </string>
+
+    <!-- Album Screen -->
+    <string name="search_hint">Search in images..</string>
+    <string name="search_content_description">Search</string>
+    <string name="empty_text">No matching images</string>
+    <string name="share_with">Share with</string>
+
+    <!-- Action Tool Bar -->
+    <string name="back_content_description">Back</string>
+    <string name="share_content_description">Share</string>
+</resources>
