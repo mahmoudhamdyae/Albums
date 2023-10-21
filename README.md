@@ -13,6 +13,7 @@ Albums is a native Android mobile application that uses Kotlin Programming Langu
 * Retrofit.
 * Hilt Dependency Injection.
 * Coroutines.
+* MVVM Design Pattern.
 
 ## Downloads
 [APK Download](https://drive.google.com/file/d/1Ls25b-Nt0aDYyZMaYvo0vplmiqifbBFL/view?usp=sharing)

@@ -7,10 +7,9 @@ import android.net.Uri
 import android.provider.MediaStore.Images
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -31,13 +30,11 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -195,10 +192,10 @@ fun PhotosList(
             columns = GridCells.Fixed(3),
             modifier = modifier.testTag(TestTags.ALBUMS_PHOTOS)
         ) {
-            items(count = photos.size, key = { photos[it].id }) {
+            items(items = photos, key = { it.id }) {
                 PhotosListItem(
-                    photo = photos[it],
-                    modifier = modifier.clickable { clickPhoto(photos[it]) }
+                    photo = it,
+                    modifier = modifier.clickable { clickPhoto(it) }
                 )
             }
         }
